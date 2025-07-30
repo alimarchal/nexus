@@ -1,0 +1,1 @@
+<img src="{{ asset('icon-images/logo.png') }}" class="w-auto h-auto" alt="Nexus Logo">
