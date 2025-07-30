@@ -119,6 +119,18 @@
 
         {{ $slot }}
 
+        <script src="{{ url('select2/jquery-3.5.1.js') }}"></script>
+        <script src="{{ url('select2/select2.min.js') }}" defer></script>
+        <script>
+            $(document).ready(function () {
+                $('.select2').select2();
+            });
+
+            $('form').submit(function(){
+                // If x-button does not render as a traditional submit button, target it directly by ID or class
+                $('#submit-btn').attr('disabled', 'disabled');
+            });
+        </script>
         @fluxScripts
     </body>
 </html>
